@@ -25,12 +25,9 @@
     }
   </script>
   <style>
-    /* Custom animations & overrides for Cache44 landing page */
-
     html {
       scroll-behavior: smooth;
     }
-
     body {
       margin: 0;
       padding: 0;
@@ -40,84 +37,32 @@
       align-items: center;
       justify-content: center;
     }
-
     .page-container {
       max-width: 1200px;
       width: 100%;
       margin: 0 auto;
       background: white;
     }
-
-    /* Fade up animation */
-    @keyframes fadeUp {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .animate-fadeUp {
-      animation: fadeUp 0.5s ease-out;
-    }
-
-    /* Hover effect for provider logos */
     .hover-logo {
       transition: filter 0.2s ease, transform 0.2s ease;
     }
-
     .hover-logo:hover {
       filter: brightness(0) saturate(100%) invert(36%) sepia(98%) saturate(1748%) hue-rotate(235deg) brightness(97%) contrast(94%);
       transform: scale(1.02);
     }
-
-    /* Card hover effect */
     .card-hover {
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-
     .card-hover:hover {
       transform: translateY(-4px);
       box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
     }
-
-    /* Ensure any Tailwind animations that are missing keyframes get them */
-    @keyframes spin {
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    .animate-spin {
-      animation: spin 1s linear infinite;
-    }
-
-    @keyframes ping {
-      75%, 100% {
-        transform: scale(2);
-        opacity: 0;
-      }
-    }
-
-    .animate-ping {
-      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% {
-        opacity: 1;
-      }
-      50% {
-        opacity: 0.5;
-      }
-    }
-
-    .animate-pulse {
-      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .animate-spin { animation: spin 1s linear infinite; }
+    @keyframes ping { 75%, 100% { transform: scale(2); opacity: 0; } }
+    .animate-ping { animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+    .animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
   </style>
 </head>
 <body class="font-sans antialiased">
@@ -125,18 +70,18 @@
     <!-- Navigation -->
     <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
       <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center flex-wrap gap-4">
-        <div class="flex items-center gap-2">
-          <img src="Cache 44 Logo.png" alt="Cache44 Logo" class="h-8 w-auto">
-          <span class="font-bold text-xl text-darkSlate">Cache44</span>
-        </div>
+        <!-- Logo only (no extra text) -->
+        <img src="Cache 44 Logo.png" alt="Cache44 Logo" class="h-8 w-auto">
+
         <div class="flex gap-6 text-sm font-medium text-muted">
           <a href="#features" class="hover:text-primary transition">Features</a>
           <a href="#how-it-works" class="hover:text-primary transition">How it works</a>
           <a href="#providers" class="hover:text-primary transition">Providers</a>
         </div>
         <div class="flex gap-3">
-          <a href="https://base44.com" class="hidden sm:inline-block text-sm font-medium text-darkSlate hover:text-primary transition px-3 py-2">Sign in</a>
-          <a href="https://base44.com" class="bg-primary text-white px-5 py-2 rounded-full text-sm font-semibold shadow-md hover:bg-primaryLight transition shadow-primary/20">Start saving →</a>
+          <!-- Replace YOUR_DASHBOARD_URL with actual Base44 login page -->
+          <a href="https://base44.com/login" class="hidden sm:inline-block text-sm font-medium text-darkSlate hover:text-primary transition px-3 py-2">Sign in</a>
+          <a href="https://base44.com/signup" class="bg-primary text-white px-5 py-2 rounded-full text-sm font-semibold shadow-md hover:bg-primaryLight transition shadow-primary/20">Start saving →</a>
         </div>
       </div>
     </nav>
@@ -151,14 +96,15 @@
           </span>
           Beta now open
         </div>
+        <!-- Fixed heading: all on one line -->
         <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-darkSlate max-w-4xl mx-auto leading-tight">
-          Cut Your AI API Costs by <span class="text-primary">40–75%</span>
+          Cut Your AI API Costs by 40–75%
         </h1>
         <p class="text-xl text-muted max-w-2xl mx-auto mt-6 leading-relaxed">
           A smart proxy that sits between your app and your AI provider. It routes requests to free/paid models, caches identical calls, and tracks savings – no code changes required.
         </p>
         <div class="mt-8 flex flex-wrap justify-center gap-4">
-          <a href="https://base44.com" class="bg-primary text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-primaryLight transition shadow-primary/30">Get started – it's free</a>
+          <a href="https://base44.com/signup" class="bg-primary text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-primaryLight transition shadow-primary/30">Get started – it's free</a>
           <a href="#how-it-works" class="border border-gray-300 text-darkSlate px-8 py-3 rounded-full text-lg font-medium hover:border-primary hover:text-primary transition">How it works</a>
         </div>
       </div>
@@ -274,7 +220,7 @@
         <h2 class="text-3xl md:text-4xl font-bold text-darkSlate">Ready to cut your AI bill by 40–75%?</h2>
         <p class="text-muted text-lg mt-3">Join beta users already saving thousands on API calls.</p>
         <div class="mt-8 flex flex-wrap justify-center gap-4">
-          <a href="https://base44.com" class="bg-primary text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-primaryLight transition">Get started – it's free →</a>
+          <a href="https://base44.com/signup" class="bg-primary text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-primaryLight transition">Get started – it's free →</a>
           <a href="#how-it-works" class="border border-gray-300 text-darkSlate px-8 py-3 rounded-full text-lg font-medium hover:border-primary hover:text-primary transition">Learn more</a>
         </div>
       </div>
@@ -286,7 +232,6 @@
         <div>
           <div class="flex items-center gap-2">
             <img src="Cache 44 Logo.png" alt="Cache44 Logo" class="h-7 w-auto">
-            <span class="font-bold text-darkSlate">Cache44</span>
           </div>
           <p class="text-sm text-muted mt-2 max-w-xs">The smart proxy that pays for itself.</p>
         </div>
