@@ -24,7 +24,7 @@
       },
     }
   </script>
-  <style>
+   <style>
     html { scroll-behavior: smooth; }
     body { margin: 0; padding: 0; background-color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; }
     .page-container { max-width: 1200px; width: 100%; margin: 0 auto; background: white; }
@@ -45,13 +45,16 @@
     <!-- Navigation -->
     <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
       <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center flex-wrap gap-4">
+        <!-- Logo only (no extra text) -->
         <img src="Cache 44 Logo.png" alt="Cache44 Logo" class="h-8 w-auto">
+
         <div class="flex gap-6 text-sm font-medium text-muted">
           <a href="#features" class="hover:text-primary transition">Features</a>
           <a href="#how-it-works" class="hover:text-primary transition">How it works</a>
           <a href="#providers" class="hover:text-primary transition">Providers</a>
         </div>
         <div class="flex gap-3">
+          <!-- Replace YOUR_DASHBOARD_URL with actual Base44 login page -->
           <a href="https://base44.com/login" class="hidden sm:inline-block text-sm font-medium text-darkSlate hover:text-primary transition px-3 py-2">Sign in</a>
           <a href="https://base44.com/signup" class="bg-primary text-white px-5 py-2 rounded-full text-sm font-semibold shadow-md hover:bg-primaryLight transition shadow-primary/20">Start saving →</a>
         </div>
@@ -59,31 +62,183 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="max-w-6xl mx-auto px-6 py-20 md:py-28 text-center">
-      <div>
-        <div class="inline-flex items-center gap-2 bg-purple-50 rounded-full px-3 py-1 text-xs font-medium text-primary mb-6">
-          <span class="relative flex h-2 w-2">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-          </span>
-          Beta now open
+<section class="max-w-6xl mx-auto px-6 py-20 md:py-28 text-center">
+  <div>
+    <div class="inline-flex items-center gap-2 bg-purple-50 rounded-full px-3 py-1 text-xs font-medium text-primary mb-6">
+      <span class="relative flex h-2 w-2">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+      </span>
+      Beta now open
+    </div>
+    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-darkSlate max-w-4xl mx-auto leading-tight">
+      Cut Your AI API Costs by <span class="text-primary" style="white-space: nowrap;">40–75%</span>
+    </h1>
+    <p class="text-xl text-muted max-w-2xl mx-auto mt-6 leading-relaxed">
+      A smart proxy that sits between your app and your AI provider. It routes requests to free/paid models, caches identical calls, and tracks savings – no code changes required.
+    </p>
+    <div class="mt-8 flex flex-wrap justify-center gap-4">
+      <a href="https://base44.com/signup" class="bg-primary text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-primaryLight transition shadow-primary/30">Get started – it's free</a>
+      <a href="#how-it-works" class="border border-gray-300 text-darkSlate px-8 py-3 rounded-full text-lg font-medium hover:border-primary hover:text-primary transition">How it works</a>
+    </div>
+  </div>
+</section>
+
+    <!-- Problem / Solution -->
+    <section class="bg-surface py-20">
+      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+          <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-darkSlate">The problem</h3>
+          <p class="text-muted mt-2 leading-relaxed">Every AI API call costs money – even when users ask the exact same question twice. Duplicate requests, simple prompts, and inefficient routing waste your budget.</p>
         </div>
-        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-darkSlate max-w-4xl mx-auto leading-tight">
-          Cut Your AI API Costs by <span class="text-primary" style="white-space: nowrap;">40–75%</span>
-        </h1>
-        <p class="text-xl text-muted max-w-2xl mx-auto mt-6 leading-relaxed">
-          A smart proxy that sits between your app and your AI provider. It routes requests to free/paid models, caches identical calls, and tracks savings – no code changes required.
-        </p>
-        <div class="mt-8 flex flex-wrap justify-center gap-4">
-          <a href="https://base44.com/signup" class="bg-primary text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-primaryLight transition shadow-primary/30">Get started – it's free</a>
-          <a href="#how-it-works" class="border border-gray-300 text-darkSlate px-8 py-3 rounded-full text-lg font-medium hover:border-primary hover:text-primary transition">How it works</a>
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+          <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-darkSlate">Cache44 solution</h3>
+          <p class="text-muted mt-2 leading-relaxed">Intercepts each request. Simple prompts go to free models (Groq, Gemini, Qwen). Duplicate calls come from cache. Complex tasks use paid models. You pay less, automatically.</p>
         </div>
       </div>
     </section>
 
-    <!-- Rest of your sections (Problem/Solution, How it works, Features, Dashboard, Providers, CTA, Footer) -->
-    <!-- Copy those from your previous file – they remain unchanged -->
-    <!-- ... -->
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-20 max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-darkSlate">How it works</h2>
+        <p class="text-muted text-lg mt-2 max-w-2xl mx-auto">Three simple steps to lower your AI bill</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 rounded-full bg-primary/10 text-primary text-2xl font-bold flex items-center justify-center mx-auto mb-4">1</div>
+          <h3 class="text-xl font-semibold text-darkSlate">Add your API keys</h3>
+          <p class="text-muted mt-2">Bring your own keys – free models (<span class="font-medium">Groq, Gemini, Qwen-Turbo</span>) or paid (OpenAI, Anthropic, DeepSeek). We never store them permanently.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 rounded-full bg-primary/10 text-primary text-2xl font-bold flex items-center justify-center mx-auto mb-4">2</div>
+          <h3 class="text-xl font-semibold text-darkSlate">Point your app</h3>
+          <p class="text-muted mt-2">Change one line of code to use our proxy URL: <code class="bg-gray-100 px-2 py-0.5 rounded text-sm">https://cache44.fly.dev/v1</code>. Keep your existing OpenAI‑compatible client.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 rounded-full bg-primary/10 text-primary text-2xl font-bold flex items-center justify-center mx-auto mb-4">3</div>
+          <h3 class="text-xl font-semibold text-darkSlate">Start saving</h3>
+          <p class="text-muted mt-2">Your dashboard shows every cache hit, dollars saved, and which provider handled each request. No surprises – just lower bills.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Smart features section -->
+    <section id="features" class="bg-surface py-20">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-darkSlate">Smart features, real savings</h2>
+          <p class="text-muted text-lg mt-2">Everything you need to cut AI costs without changing your workflow</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 card-hover">
+            <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4"><svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg></div>
+            <h3 class="font-bold text-darkSlate">Smart Routing</h3>
+            <p class="text-sm text-muted mt-1">Short prompts → free models (Groq, Gemini, Qwen). Long/complex → your paid provider.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 card-hover">
+            <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4"><svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg></div>
+            <h3 class="font-bold text-darkSlate">Exact Cache</h3>
+            <p class="text-sm text-muted mt-1">Identical requests served from cache – second user pays $0. No duplicate charges.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 card-hover">
+            <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4"><svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg></div>
+            <h3 class="font-bold text-darkSlate">BYOK</h3>
+            <p class="text-sm text-muted mt-1">Your keys, your control. Encrypted, never logged. Bring your own OpenAI/Groq/Anthropic keys.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 card-hover">
+            <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4"><svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg></div>
+            <h3 class="font-bold text-darkSlate">Live Dashboard</h3>
+            <p class="text-sm text-muted mt-1">See total saved, cache hit rate, and per‑request cost breakdown in real time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dashboard Screenshot Section -->
+    <section class="py-16 max-w-6xl mx-auto px-6">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-darkSlate">See your savings in real time</h2>
+        <p class="text-muted mt-2">Every cache hit, every dollar saved – right in your dashboard.</p>
+      </div>
+      <div class="rounded-2xl shadow-xl border border-gray-200 overflow-hidden bg-white">
+        <img src="dashboard-screenshot.png" alt="Cache44 savings dashboard showing cache hits and cost breakdown" class="w-full h-auto">
+      </div>
+    </section>
+
+    <!-- Providers strip -->
+    <section id="providers" class="py-16 max-w-6xl mx-auto px-6">
+      <div class="text-center mb-8">
+        <p class="text-sm uppercase tracking-wider text-muted font-semibold">Supported providers – bring your own key</p>
+        <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12 mt-6 grayscale opacity-70 hover:grayscale-0 transition-all duration-300">
+          <span class="text-2xl font-semibold text-darkSlate/70 hover-logo">Groq</span>
+          <span class="text-2xl font-semibold text-darkSlate/70 hover-logo">Gemini</span>
+          <span class="text-2xl font-semibold text-darkSlate/70 hover-logo">Qwen</span>
+          <span class="text-2xl font-semibold text-darkSlate/70 hover-logo">OpenAI</span>
+          <span class="text-2xl font-semibold text-darkSlate/70 hover-logo">DeepSeek</span>
+          <span class="text-2xl font-semibold text-darkSlate/70 hover-logo">Anthropic</span>
+        </div>
+        <p class="text-xs text-muted mt-4">+ more coming soon</p>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="bg-primary/5 py-20">
+      <div class="max-w-4xl mx-auto text-center px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-darkSlate">Ready to cut your AI bill by 40–75%?</h2>
+        <p class="text-muted text-lg mt-3">Join beta users already saving thousands on API calls.</p>
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+          <a href="https://base44.com/signup" class="bg-primary text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-primaryLight transition">Get started – it's free →</a>
+          <a href="#how-it-works" class="border border-gray-300 text-darkSlate px-8 py-3 rounded-full text-lg font-medium hover:border-primary hover:text-primary transition">Learn more</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200 py-12 bg-white">
+      <div class="max-w-6xl mx-auto px-6 flex flex-wrap justify-between gap-8">
+        <div>
+          <div class="flex items-center gap-2">
+            <img src="Cache 44 Logo.png" alt="Cache44 Logo" class="h-7 w-auto">
+          </div>
+          <p class="text-sm text-muted mt-2 max-w-xs">The smart proxy that pays for itself.</p>
+        </div>
+        <div class="flex gap-12 text-sm">
+          <div>
+            <p class="font-semibold text-darkSlate">Product</p>
+            <ul class="mt-2 space-y-1 text-muted">
+              <li><a href="#features" class="hover:text-primary">Features</a></li>
+              <li><a href="#how-it-works" class="hover:text-primary">How it works</a></li>
+              <li><a href="#providers" class="hover:text-primary">Providers</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="font-semibold text-darkSlate">Resources</p>
+            <ul class="mt-2 space-y-1 text-muted">
+              <li><a href="#how-it-works" class="hover:text-primary">Documentation</a></li>
+              <li><a href="#providers" class="hover:text-primary">API reference</a></li>
+              <li><a href="#" class="hover:text-primary">Status</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="font-semibold text-darkSlate">Legal</p>
+            <ul class="mt-2 space-y-1 text-muted">
+              <li><a href="#" class="hover:text-primary">Privacy</a></li>
+              <li><a href="#" class="hover:text-primary">Terms</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="max-w-6xl mx-auto px-6 mt-8 pt-6 border-t border-gray-100 text-center text-xs text-muted">
+        © 2026 Cache44. All rights reserved.
+      </div>
+    </footer>
   </div>
 </body>
 </html>
