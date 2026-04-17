@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Cache44 – Cut AI API costs by 40–75%</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -24,7 +25,12 @@
     }
   </script>
   <style>
-    /* Force centering for Framer embed */
+    /* Custom animations & overrides for Cache44 landing page */
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -34,32 +40,85 @@
       align-items: center;
       justify-content: center;
     }
+
     .page-container {
       max-width: 1200px;
       width: 100%;
       margin: 0 auto;
       background: white;
     }
-    /* Keep all existing styles */
+
+    /* Fade up animation */
+    @keyframes fadeUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fadeUp {
+      animation: fadeUp 0.5s ease-out;
+    }
+
+    /* Hover effect for provider logos */
     .hover-logo {
       transition: filter 0.2s ease, transform 0.2s ease;
     }
+
     .hover-logo:hover {
       filter: brightness(0) saturate(100%) invert(36%) sepia(98%) saturate(1748%) hue-rotate(235deg) brightness(97%) contrast(94%);
       transform: scale(1.02);
     }
+
+    /* Card hover effect */
     .card-hover {
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
+
     .card-hover:hover {
       transform: translateY(-4px);
       box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
     }
-    html {
-      scroll-behavior: smooth;
+
+    /* Ensure any Tailwind animations that are missing keyframes get them */
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .animate-spin {
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes ping {
+      75%, 100% {
+        transform: scale(2);
+        opacity: 0;
+      }
+    }
+
+    .animate-ping {
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
+    }
+
+    .animate-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
     }
   </style>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="page-container">
@@ -67,9 +126,7 @@
     <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
       <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center flex-wrap gap-4">
         <div class="flex items-center gap-2">
-          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-primaryLight flex items-center justify-center">
-            <span class="text-white font-bold text-lg">C</span>
-          </div>
+          <img src="Cache 44 Logo.png" alt="Cache44 Logo" class="h-8 w-auto">
           <span class="font-bold text-xl text-darkSlate">Cache44</span>
         </div>
         <div class="flex gap-6 text-sm font-medium text-muted">
@@ -86,7 +143,7 @@
 
     <!-- Hero Section -->
     <section class="max-w-6xl mx-auto px-6 py-20 md:py-28 text-center">
-      <div class="animate-[fadeUp_0.5s_ease-out]">
+      <div>
         <div class="inline-flex items-center gap-2 bg-purple-50 rounded-full px-3 py-1 text-xs font-medium text-primary mb-6">
           <span class="relative flex h-2 w-2">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
@@ -104,7 +161,6 @@
           <a href="https://base44.com" class="bg-primary text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-primaryLight transition shadow-primary/30">Get started – it's free</a>
           <a href="#how-it-works" class="border border-gray-300 text-darkSlate px-8 py-3 rounded-full text-lg font-medium hover:border-primary hover:text-primary transition">How it works</a>
         </div>
-        <p class="text-xs text-muted mt-6">No credit card required for beta. USA‑friendly free models included.</p>
       </div>
     </section>
 
@@ -153,7 +209,7 @@
       </div>
     </section>
 
-    <!-- Features Grid -->
+    <!-- Smart features section -->
     <section id="features" class="bg-surface py-20">
       <div class="max-w-6xl mx-auto px-6">
         <div class="text-center mb-12">
@@ -185,6 +241,17 @@
       </div>
     </section>
 
+    <!-- Dashboard Screenshot Section -->
+    <section class="py-16 max-w-6xl mx-auto px-6">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-darkSlate">See your savings in real time</h2>
+        <p class="text-muted mt-2">Every cache hit, every dollar saved – right in your dashboard.</p>
+      </div>
+      <div class="rounded-2xl shadow-xl border border-gray-200 overflow-hidden bg-white">
+        <img src="dashboard-screenshot.png" alt="Cache44 savings dashboard showing cache hits and cost breakdown" class="w-full h-auto">
+      </div>
+    </section>
+
     <!-- Providers strip -->
     <section id="providers" class="py-16 max-w-6xl mx-auto px-6">
       <div class="text-center mb-8">
@@ -210,7 +277,6 @@
           <a href="https://base44.com" class="bg-primary text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-primaryLight transition">Get started – it's free →</a>
           <a href="#how-it-works" class="border border-gray-300 text-darkSlate px-8 py-3 rounded-full text-lg font-medium hover:border-primary hover:text-primary transition">Learn more</a>
         </div>
-        <p class="text-xs text-muted mt-6">No credit card required. Free models included.</p>
       </div>
     </section>
 
@@ -219,9 +285,7 @@
       <div class="max-w-6xl mx-auto px-6 flex flex-wrap justify-between gap-8">
         <div>
           <div class="flex items-center gap-2">
-            <div class="w-7 h-7 rounded-lg bg-gradient-to-br from-primary to-primaryLight flex items-center justify-center">
-              <span class="text-white font-bold text-sm">C</span>
-            </div>
+            <img src="Cache 44 Logo.png" alt="Cache44 Logo" class="h-7 w-auto">
             <span class="font-bold text-darkSlate">Cache44</span>
           </div>
           <p class="text-sm text-muted mt-2 max-w-xs">The smart proxy that pays for itself.</p>
@@ -238,8 +302,8 @@
           <div>
             <p class="font-semibold text-darkSlate">Resources</p>
             <ul class="mt-2 space-y-1 text-muted">
-              <li><a href="#" class="hover:text-primary">Documentation</a></li>
-              <li><a href="#" class="hover:text-primary">API reference</a></li>
+              <li><a href="#how-it-works" class="hover:text-primary">Documentation</a></li>
+              <li><a href="#providers" class="hover:text-primary">API reference</a></li>
               <li><a href="#" class="hover:text-primary">Status</a></li>
             </ul>
           </div>
